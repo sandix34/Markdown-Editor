@@ -1,3 +1,4 @@
+import GithubCorner from 'react-github-corner';
 import React, { Component } from 'react';
 import './App.css';
 import { sampleText } from './sampleText';
@@ -13,7 +14,7 @@ class App extends Component {
      }   
   }
 
-  // récupère le text enregistré dans le locamStorage 
+  // récupère le texte enregistré dans le localStorage 
   componentDidMount () {
     const text = localStorage.getItem('text')
     //si c'est vide on récupère le texte de départ
@@ -56,7 +57,9 @@ class App extends Component {
             <div dangerouslySetInnerHTML={ this.renderText(this.state.text) }/>
           </div>
         </div>
+        <GithubCorner href="https://github.com/sandix34/Markdown-Editor" />
       </div>
+      
     );
   }
 }

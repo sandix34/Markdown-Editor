@@ -12,5 +12,5 @@ h1 {
 }
 
 .result {
-  background-color: white;
+  border: solid 1px black;
 }
