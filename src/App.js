@@ -9,7 +9,12 @@ class App extends Component {
     super(props);
     this.state = { 
       text: sampleText
-     }
+     }   
+  }
+
+  handleChange = evt => {
+    const text = evt.target.value
+    this.setState({ text })
   }
 
   render() {
@@ -22,6 +27,7 @@ class App extends Component {
             className="form-control" 
             rows="30"
             value={ this.state.text }
+            onChange={ this.handleChange }
             />
           </div>
           <div className="col-sm-6 result">
