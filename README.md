@@ -1,4 +1,4 @@
-:link: [ Voir le projet en ligne ]()
+:link: [ Voir le projet en ligne ](https://nervous-hawking-7a145d.netlify.com)
 
 ![markdownEditor](https://user-images.githubusercontent.com/44428775/57458819-4e7a8000-7272-11e9-9ef5-60eabedf9ba1.gif)
 
@@ -21,8 +21,7 @@ Dans le répertoire du projet, vous pouvez exécuter:
 Lance l'application en mode développement. .<br>
 Oovrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans le navigateur.
 
-La page sera rechargée si vous apportez des modifications.<br>
-Vous verrez également les erreurs de peluches dans la console.
+La page sera rechargée si vous apportez des modifications.
 
 ### `npm test`
 
