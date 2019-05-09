@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { sampleText } from './sampleText';
+import marked from 'marked';
 
 
 class App extends Component {
@@ -17,6 +18,13 @@ class App extends Component {
     this.setState({ text })
   }
 
+  // traduction du text avec marked.js
+  renderText = text => {
+    const __html = marked(text, { sanitize: true })
+    return { __html: __html }
+
+  } 
+
   render() {
     return (
       <div className="container">
@@ -31,9 +39,7 @@ class App extends Component {
             />
           </div>
           <div className="col-sm-6 result">
-            <div>
-              { this.state.text }
-            </div>
+            <div dangerouslySetInnerHTML={ this.renderText(this.state.text) }/>
           </div>
         </div>
       </div>
