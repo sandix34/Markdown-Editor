@@ -13,12 +13,26 @@ class App extends Component {
      }   
   }
 
+  // récupère le text enregistré dans le locamStorage 
+  componentDidMount () {
+    const text = localStorage.getItem('text')
+    //si c'est vide on récupère le texte de départ
+    return ( text ? this.setState({text}) : this.setState({ text: sampleText }) )
+  }
+
+  // Enregistrer les modifications dans le localStorage
+  componentDidUpdate () {
+    //const text = this.state.text
+    const { text } = this.state
+    localStorage.setItem('text', text)
+  }
+
   handleChange = evt => {
     const text = evt.target.value
     this.setState({ text })
   }
 
-  // traduction du text avec marked.js
+  // traduction du texte avec marked.js
   renderText = text => {
     const __html = marked(text, { sanitize: true })
     return { __html: __html }
